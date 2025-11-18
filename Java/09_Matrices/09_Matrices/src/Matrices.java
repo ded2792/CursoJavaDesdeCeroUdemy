@@ -1,9 +1,9 @@
 public class Matrices {
     public static void main(String[] args) {
         // Definimos una matriz
-        //int[][] matroz = new int[2][3];
-        // Otra forma
-        var matriz = new int[2][3];
+        final var RENGLONES = 2;
+        final var COLUMNAS = 3;
+        var matriz = new int[RENGLONES][COLUMNAS];
         // Modificar los valores de la matriz
         matriz[0][0] = 100;
         matriz[0][1] = 200;
@@ -11,9 +11,11 @@ public class Matrices {
         matriz[1][0] = 400;
         matriz[1][1] = 500;
         matriz[1][2] = 600;
-        // Acceder a los valores
-        System.out.println("Valore 1 [0][0] = " + matriz[0][0]);
-        System.out.println("Valore 5 [1][1] = " + matriz[1][1]);
-        System.out.println("Valore 5 [1][1] = " + matriz[1][2]);
+        // Recorrer una matriz
+        for(var ren = 0; ren < RENGLONES; ren++){
+            for (var col = 0; col < COLUMNAS; col++){
+                System.out.println("Valor[" + ren + "][" + col + "] = " + matriz[ren][col]);
+            }
+        }
     }
 }
